@@ -2,6 +2,7 @@
   .row
     .col-sm-10.col-sm-offset-1
       %form.sign_in(action=login_path method="post")
+        = hidden_field_tag :authenticity_token, form_authenticity_token
         %header
           %h1 Sign in
         %fieldset
