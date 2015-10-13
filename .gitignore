@@ -12,6 +12,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+logfile
 /tmp
 
 # Ignore the database.yml file

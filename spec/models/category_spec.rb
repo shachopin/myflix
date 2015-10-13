@@ -1,8 +1,8 @@
 require "spec_helper"
 
 describe Category do
-  it { should have_many(:videos)}
-
+  it { should have_many(:videos) }
+ 
   describe "recent_videos" do
     it "return the videos in the reverse chronical order by created at" do
       epic = Category.create(name: "epic")
@@ -36,10 +36,5 @@ describe Category do
       expect(epic.recent_videos).to eq([])
     end
 
-  end
-
-
-
-
-  
+  end  
 end
