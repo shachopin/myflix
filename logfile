@@ -184,3 +184,11 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2015-10-06 19:48:59 PDT
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+ERROR:  database "daweidai_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "daweidai_development"
+ERROR:  database "daweidai_development" already exists
+STATEMENT:  CREATE DATABASE "daweidai_development" ENCODING = 'unicode'
+ERROR:  database "daweidai_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "daweidai_development"
