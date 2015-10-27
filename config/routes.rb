@@ -6,6 +6,7 @@ Myflix::Application.routes.draw do
     collection do
       post "search"
     end
+    resources :reviews, only:[:create]
   end
   #get '/videos/:id', to: "videos#show", as: "video"
   get '/categories/:id', to: "categories#show", as: "category"
