@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :require_login
+  before_action :require_login
 
   def create
     @video = Video.find(params[:video_id])
