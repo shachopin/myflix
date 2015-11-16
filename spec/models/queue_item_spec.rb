@@ -38,7 +38,7 @@ describe QueueItem do
       expect(Review.first.rating).to eq(4)
     end
 
-    it "clears the rating of the review if the review is present" do
+    it "clears the rating of the review if the review is present using nil" do
       video = Fabricate(:video)
       user = Fabricate(:user)
       review = Fabricate(:review, user: user, video: video, rating: 2)
