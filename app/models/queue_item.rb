@@ -12,13 +12,13 @@ class QueueItem < ActiveRecord::Base
   end
 
   def rating=(new_rating)
+    new_rating = nil if new_rating == ""
+
     if review
       review.update_column(:rating, new_rating)
-    else
-      if new_rating
+    elsif new_rating
         review = Review.new(user: user, video: video, rating: new_rating)
         review.save(validate: false)
-      end
     end
   end
 
