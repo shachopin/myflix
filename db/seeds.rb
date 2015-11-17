@@ -20,6 +20,6 @@ dawei = User.create!(email: "test@example.com", password: "123", full_name: "Daw
 Review.create!(user: dawei, video: monk, rating: 5, content: "This is a really good movie!" )
 Review.create!(user: dawei, video: futurama, rating: 2, content: "This movie is not so good!")
 
-QueueItem.create!(user: dawei, video: monk)
-QueueItem.create!(user: dawei, video: futurama)
-QueueItem.create!(user: dawei, video: south_park)
+QueueItem.create!(user: dawei, video: monk, position: 1)
+QueueItem.create!(user: dawei, video: futurama, position: 2)
+QueueItem.create!(user: dawei, video: south_park, position: 3)
