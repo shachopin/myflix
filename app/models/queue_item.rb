@@ -17,8 +17,8 @@ class QueueItem < ActiveRecord::Base
     if review
       review.update_column(:rating, new_rating)
     elsif new_rating
-        review = Review.new(user: user, video: video, rating: new_rating)
-        review.save(validate: false)
+      review = Review.new(user: user, video: video, rating: new_rating)
+      review.save(validate: false)
     end
   end
 
