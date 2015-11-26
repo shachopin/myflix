@@ -8,7 +8,7 @@ describe User do
   it { should have_many(:queue_items).order(:position)}
 
   describe "#queued_video?" do
-    it "returns ttrue when the user queued the video" do 
+    it "returns true when the user queued the video" do 
       user = Fabricate(:user)
       video = Fabricate(:video)
       Fabricate(:queue_item, user: user, video: video)
